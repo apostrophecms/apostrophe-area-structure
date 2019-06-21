@@ -1,0 +1,51 @@
+{%- extends "apostrophe-modal:baseSlideable.html" -%}
+{%- import 'apostrophe-ui:components/buttons.html' as buttons -%}
+
+{%- block modalClass -%}
+  apos-widget-tree apos-ui-modal-no-sidebar apos-modal-slideable
+{%- endblock -%}
+
+{%- block controls -%}
+  {{ buttons.major('Done', { action: 'cancel' }, 'apos-button--major') }}
+{%- endblock -%}
+
+{%- block label -%}
+  {{ __('Widget Tree') }}
+{%- endblock -%}
+
+{% macro widget(widgetItem, docId) %}
+  <li>
+    <button data-apos-widget-tree-delete data-apos-doc-id="{{ docId }}" data-apos-widget-id="{{ widgetItem.id }}" data-apos-widget-dot-path="{{ widgetItem.data.__dotPath }}" class="apos-button apos-button--in-group apos-widget-tree-delete" type="button" data-apos-tooltip="Trash" ><span class="apos-button-label"></span><i class="fa fa-trash"></i></button>
+    {{ widgetItem.name }}
+    {% if widgetItem.children %}
+      {% for areaItem in widgetItem.children %}
+        {{ area(areaItem) }}
+      {% endfor %}
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{% macro area(areaItem) %}
+  {% if areaItem.children %}
+    <ol>
+      <li>
+        <span class="apos-widget-tree-area-label">Area in: {{ data.pages[areaItem.name].title }}</span>
+        <ol>
+          {% for widgetItem in areaItem.children %}
+            {{ widget(widgetItem, areaItem.name) }}
+          {% endfor %}
+        </ol>
+      </li>
+    </ol>
+  {% endif %}
+{% endmacro %}
+
+{%- block body -%}
+  <div class="apos-widget-tree-body" data-widget-tree-modal>
+    {% for item in data.tree %}
+      {{ area(item) }}
+    {% endfor %}
+  </div>
+{%- endblock -%}
+
+{%- block instructions -%}{%- endblock -%}
