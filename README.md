@@ -1,3 +1,3 @@
-# apostrophe-widget-tree
+# apostrophe-area-structure
 
-WIP
+A tool for visualizing a page's area structure

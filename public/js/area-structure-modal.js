@@ -1,15 +1,15 @@
-apos.define('widget-tree-modal', {
+apos.define('area-structure-modal', {
   extend: 'apostrophe-modal',
-  source: 'widget-tree-modal',
+  source: 'area-structure-modal',
 
   construct: function(self, options) {
     self.beforeShow = function(callback) {
-      self.$el.find('[data-apos-widget-tree-delete]').on('click', function() {
+      self.$el.find('[data-apos-area-structure-delete]').on('click', function() {
         if (!confirm("Are you sure you want to delete this widget? You can undo with Versions")) {
           return;
         }
         var $this = $(this);
-        self.api('widget-tree-delete', {
+        self.api('area-structure-delete', {
           widgetId: $this.attr('data-apos-widget-id'),
           docId: $this.attr('data-apos-doc-id'),
           dotPath: $this.attr('data-apos-widget-dot-path')

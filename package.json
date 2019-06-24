@@ -1,5 +1,5 @@
 {
-  "name": "apostrophe-widget-tree",
+  "name": "apostrophe-area-structure",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apostrophecms/apostrophe-widget-tree.git"
+    "url": "git+https://github.com/apostrophecms/apostrophe-area-structure.git"
   },
   "author": "P'unk Avenue, LLC",
   "license": "MIT",
