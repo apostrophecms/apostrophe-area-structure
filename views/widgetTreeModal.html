@@ -27,10 +27,11 @@
 
 {% macro area(areaItem) %}
   {% if areaItem.children %}
-    <ol>
+    <ol class="apos-widget-tree-list apos-widget-tree-list--area">
       <li>
-        <span class="apos-widget-tree-area-label">Area in: {{ data.pages[areaItem.name].title }}</span>
-        <ol>
+        <span class="apos-widget-tree-area-label">Area Name: <strong>{{ areaItem.areaName }}</strong></span>
+        <span class="apos-widget-tree-area-label">Document: <strong>{{ data.pages[areaItem.name].title or data.pages[areaItem.name].slug }}</strong></span>
+        <ol class="apos-widget-tree-list apos-widget-tree-list--widgets">
           {% for widgetItem in areaItem.children %}
             {{ widget(widgetItem, areaItem.name) }}
           {% endfor %}

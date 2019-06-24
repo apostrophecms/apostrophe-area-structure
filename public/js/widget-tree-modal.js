@@ -1,4 +1,3 @@
-console.log('????');
 apos.define('widget-tree-modal', {
   extend: 'apostrophe-modal',
   source: 'widget-tree-modal',

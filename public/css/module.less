@@ -1,21 +1,51 @@
 .apos-widget-tree-body {
+  padding: 1rem;
   ol {
     margin-top: 1rem;
     padding: 1rem 1rem 1rem 1rem;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #d2d2d2;
+    background-color: rgba(0,0,0,0.03);
+    font-size: 12px;
   }
   li {
     padding: 1rem;
+    // &:hover {
+    //   background-color: rgba(0,0,0,0.05);
+    // }
+    i:before {
+      font-size: 15px;
+      top: -1px;
+      position: relative;
+    }
+    .apos-button:after {
+      display: none !important;
+    }
+  }
+}
+
+.apos-widget-tree-body .apos-widget-tree-list--area {
+  border-left: 3px solid #3441A2;
+  margin-bottom: 1rem;
+}
+
+.apos-widget-tree-body .apos-widget-tree-list--widgets {
+  border-left: 3px solid #01bf9a;
+  padding: 0;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  & > li {
+    border-bottom: 1px solid #a7a7a7;
+    padding: 1.5rem;
   }
 }
 
 .apos-widget-tree-body .apos-widget-tree-area-label {
-  font-weight: bold;
+  display: block;
+  
+  strong {
+    font-weight: 700;
+  }
 }
 
 .apos-widget-tree-body .apos-widget-tree-delete { 
   padding: 0 5px;
 }
-
-// .apos-widget-tree-body ol ol .apos-widget-tree-area-label { display: none; }
