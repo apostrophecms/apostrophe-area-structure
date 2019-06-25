@@ -2,7 +2,7 @@
 
 ### A tool for visualizing a page's area structure
 
-![A demo of the apostrophe-area-structure module](demos/apostrophe-area-structure-demo.gif)
+![A demo of the apostrophe-area-structure module](demo/apostrophe-area-structure-demo.gif)
 
 This module adds a `Page Area Structure` menu item to your Page Settings menu that unspools the current page's DOM for all areas and their widgets (and those widget's areas and _their_ widgets, etc) and nests them in a way that makes it simple to see their structure, without widget players/CSS obscuring them.
 
