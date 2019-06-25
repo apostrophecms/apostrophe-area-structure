@@ -11,6 +11,6 @@ The menu displays the area's `name` (key the area is stored in on the document) 
 From this menu you can delete a widget (which will delete all of it's child areas, etc)
 
 ## Future planning
-[] Create a UI switch that toggles between the draft and live versions of a document (when `apostrophe-workflow` is enabled)
-[] Consider drag-and-drop moving of widgets among areas
-[] Future UI enhancements
+- [] Create a UI switch that toggles between the draft and live versions of a document (when `apostrophe-workflow` is enabled)
+- [] Consider drag-and-drop moving of widgets among areas
+- [] Future UI enhancements
