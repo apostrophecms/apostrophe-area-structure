@@ -8,8 +8,7 @@ module.exports = {
     directory: 'lib/modules',
     modules: [
       'apostrophe-area-structure-pages',
-      'apostrophe-area-structure-pieces-pages',
-      'apostrophe-area-structure-areas'
+      'apostrophe-area-structure-pieces-pages'
     ]
   },
 
