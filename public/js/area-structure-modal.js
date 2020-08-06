@@ -27,8 +27,26 @@ apos.define('area-structure-modal', {
           }
         })
       })
+      self.$el.find('[data-apos-area-structure-edit]').on('click', function() {
+        var selector = '.apos-area-widget[data-apos-widget-id="' + $(this).attr('data-apos-widget-id') + '"]';
+        var $widget = $(selector);
+        var $controls = $widget.find('[data-apos-widget-controls]:first');
+        var $editButton = $controls.find('[data-apos-edit-item]');
+        if ($editButton.length) {
+          $editButton.click();
+        } else {
+          var $richText = $(selector + ' [data-rich-text]:first');
+          if ($richText.length) {
+            $richText.click();
+          }
+        }
+        self.hide();
+        setTimeout(function() {
+          $widget.scrollintoview();
+        }, 500);
+      });
       return setImmediate(callback);
-    }
+    };
   }
 });
 

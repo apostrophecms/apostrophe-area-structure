@@ -15,8 +15,9 @@
 
 {% macro widget(widgetItem, docId) %}
   <li>
-    <button data-apos-area-structure-delete data-apos-doc-id="{{ docId }}" data-apos-widget-id="{{ widgetItem.id }}" data-apos-widget-dot-path="{{ widgetItem.data.__dotPath }}" class="apos-button apos-button--in-group apos-area-structure-delete" type="button" data-apos-tooltip="Trash" ><span class="apos-button-label"></span><i class="fa fa-trash"></i></button>
+    <button data-apos-area-structure-edit data-apos-doc-id="{{ docId }}" data-apos-widget-id="{{ widgetItem.id }}" data-apos-widget-dot-path="{{ widgetItem.data.__dotPath }}" class="apos-button apos-button--in-group apos-area-structure-edit" type="button" data-apos-tooltip="Edit" ><span class="apos-button-label"></span><i class="fa fa-pencil"></i></button>
     {{ widgetItem.name }}
+    <button data-apos-area-structure-delete data-apos-doc-id="{{ docId }}" data-apos-widget-id="{{ widgetItem.id }}" data-apos-widget-dot-path="{{ widgetItem.data.__dotPath }}" class="apos-button apos-button--in-group apos-area-structure-delete" type="button" data-apos-tooltip="Trash" ><span class="apos-button-label"></span><i class="fa fa-trash"></i></button>
     {% if widgetItem.children %}
       {% for areaItem in widgetItem.children %}
         {{ area(areaItem) }}
