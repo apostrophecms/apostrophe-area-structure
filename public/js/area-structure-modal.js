@@ -28,10 +28,10 @@ apos.define('area-structure-modal', {
         })
       })
       self.$el.find('[data-apos-area-structure-edit]').on('click', function() {
-        var selector = '.apos-area-widget[data-apos-widget-id="' + $(this).attr('data-apos-widget-id') + '"]';
+        var selector = '[data-apos-area-edit] .apos-area-widget[data-apos-widget-id="' + $(this).attr('data-apos-widget-id') + '"]:first';
         var $widget = $(selector);
         var $controls = $widget.find('[data-apos-widget-controls]:first');
-        var $editButton = $controls.find('[data-apos-edit-item]');
+        var $editButton = $controls.find('[data-apos-edit-item]:first');
         if ($editButton.length) {
           $editButton.click();
         } else {
